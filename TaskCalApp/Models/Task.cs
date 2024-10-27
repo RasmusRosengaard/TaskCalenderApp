@@ -26,5 +26,9 @@ namespace TaskCalApp.Models
         [Required]
         public DateTime DoneDate { get; set; } = DateTime.Now;
 
+
+
+
+
     }
 }

@@ -9,6 +9,7 @@ namespace TaskCalApp.Data
         : base(options)
         {
         }
+        
         public DbSet<TaskCalApp.Models.Task> Task { get; set; } = default!;
     }
 }

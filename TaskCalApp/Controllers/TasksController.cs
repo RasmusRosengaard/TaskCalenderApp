@@ -24,6 +24,7 @@ namespace TaskCalApp.Controllers
         // GET: Tasks
         public async Task<IActionResult> Index()
         {
+            
             return View(await _context.Task.ToListAsync());
         }
 
