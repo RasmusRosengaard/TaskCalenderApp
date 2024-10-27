@@ -1,0 +1,29 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center mt-5">
+    @if (User.Identity.IsAuthenticated)
+    {
+        <h1 class="display-4 text-success">Welcome Back!</h1>
+        <p class="lead text-muted">Here’s what you can do next:</p>
+
+        <div class="d-flex justify-content-center flex-column align-items-center">
+            <a class="btn btn-lg btn-primary mb-3" asp-controller="Tasks" asp-action="Index">View My Tasks</a>
+            <a class="btn btn-lg btn-secondary mb-3" asp-controller="Tasks" asp-action="Create">Create a New Task</a>
+        </div>
+    }
+    else
+    {
+        <h1 class="display-4 text-primary">Welcome to TaskCalApp</h1>
+        <p class="lead text-muted">Your one-stop solution for managing tasks efficiently.</p>
+
+        <div class="d-flex justify-content-center">
+            <a class="btn btn-lg btn-success" href="/Identity/Account/Login" role="button">Get Started!</a>
+        </div>
+    }
+
+    <div class="mt-4">
+        <img src="~/Images/welcome_image.jpg" alt="Welcome" class="img-fluid rounded" />
+    </div>
+</div>
